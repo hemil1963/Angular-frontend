@@ -1,17 +1,17 @@
 <div id="cart-container">
   <mat-toolbar id="cart-title">
-    <span>Shopping Cart</span>
+    <!-- <span>Shopping Cart</span> -->
     <span class="spacer"></span>
-    <mat-card-actions>
-      <span>Total: &#x20B9; {{ priceSummary.total }}</span>
-      <button mat-raised-button color="accent" (click)="checkoutOrder()" *ngIf="priceSummary.total > 0">Checkout</button>
+    <mat-card-actions >
+      <span style="color: black;">Total: &#x20B9; {{ priceSummary.total }}</span>
+      <button mat-raised-button color="black" (click)="checkoutOrder()" *ngIf="priceSummary.total > 0">Order</button>
     </mat-card-actions>
   </mat-toolbar>
   <div id="cart-page">
     <table mat-table id="cart-table" [dataSource]="cart??[]">
       <ng-container matColumnDef="image">
         <th mat-header-cell *matHeaderCellDef class="first">Image</th>
-        <td mat-cell *matCellDef="let item"><img class="product-image" [src]="item.image" alt="Product Image"></td>
+        <td mat-cell *matCellDef="let item"><img class="product-image thumb" [src]="item.image" alt="Product Image"></td>
       </ng-container>
       <ng-container matColumnDef="title">
         <th mat-header-cell *matHeaderCellDef class="third">Product</th>
@@ -28,8 +28,8 @@
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef class="fifth">&nbsp;</th>
         <td mat-cell *matCellDef="let item" (click)="removeFromCart(item.productId)">
-          <a href="#" class="remove-link">
-            <span class="remove-text">Delete</span>
+          <a href="#" style="color: black;" class="remove-link">
+            <span class="remove-text" style="color: black;">Delete</span>
           </a>
         </td>
       </ng-container>

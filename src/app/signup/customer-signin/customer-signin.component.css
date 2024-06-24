@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #121212; /* Dark background */
+  background-color: #0d0202; /* Dark background */
   color: #e0e0e0; /* Light text color */
 }
 
@@ -14,7 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #333, #121212); /* Dark gradient background */
+  background: linear-gradient(to bottom, #ebe4e4, #e2dcdc); /* Dark gradient background */
 }
 
 /* Login Form and Card */
@@ -91,14 +91,14 @@ body {
 /* Login Button */
 button[mat-raised-button] {
   width: 100%;
-  background: linear-gradient(to right, #bb86fc, #3700b3); /* Accent gradient button */
+  background: linear-gradient(to right, #ff4e27, #ff3939); /* Accent gradient button */
   color: white;
   font-weight: bold;
   margin-top: 10px;
 }
 
 button[mat-raised-button]:hover {
-  background: linear-gradient(to right, #bb86fc, #6200ee);
+  background: linear-gradient(to right, #ff4e27, #ff3939);
 }
 
 /* Error Message */
