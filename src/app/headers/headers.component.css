@@ -1,0 +1,39 @@
+.mat-toolbar {
+  background: linear-gradient(to right, #ff4e27, #ff3939); /* Cool blue gradient */
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.header {
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.header i {
+  font-size: 1.8em;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.list button {
+  font-size: 1em;
+  color: white;
+  margin-right: 10px;
+  transition: background 0.3s ease;
+}
+
+.list button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.list u {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}

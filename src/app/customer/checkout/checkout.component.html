@@ -1,0 +1,37 @@
+<div class="main-box">
+  <mat-card class="login-box">
+    <h1>Add Shipping Address</h1>
+    <form [formGroup]="addressForm" class="formCls" (ngSubmit)="submitOrder()">
+      <mat-form-field class="user-box">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Enter Your Email" />
+        <mat-error *ngIf="addressForm.get('email')?.invalid && (addressForm.get('email')?.dirty || addressForm.get('email')?.touched)">
+          Email is required in valid format
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="user-box">
+        <mat-label>Address</mat-label>
+        <textarea matInput formControlName="address" placeholder="Enter Your Address" rows="2"></textarea>
+        <mat-error *ngIf="addressForm.get('address')?.invalid && (addressForm.get('address')?.dirty || addressForm.get('address')?.touched)">
+          Address is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="user-box">
+        <mat-label>Contact</mat-label>
+        <input matInput formControlName="contact" placeholder="Enter Your Contact" />
+        <mat-error *ngIf="addressForm.get('contact')?.invalid && (addressForm.get('contact')?.dirty || addressForm.get('contact')?.touched)">
+          Contact is required in valid format
+        </mat-error>
+      </mat-form-field>
+      <mat-radio-group formControlName="paymentMethod">
+        <mat-radio-button value="cash">Cash</mat-radio-button>
+        <mat-radio-button value="cheque">Cheque</mat-radio-button>
+      </mat-radio-group>
+      <br>
+      <button mat-raised-button  style="
+    background: linear-gradient(to right, #bb86fc, #3700b3);" type="submit" class="submit-btn" [disabled]="addressForm.invalid">
+        Submit
+      </button>
+    </form>
+  </mat-card>
+</div>

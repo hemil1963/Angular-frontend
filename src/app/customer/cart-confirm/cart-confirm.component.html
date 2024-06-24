@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Your Cart Items:</h2>
+<mat-dialog-content>
+    Following items are in your cart. Please confirm your order.
+    <ul class="cart-list">
+      <li *ngFor="let item of data.cartItems" class="cart-item">
+        <span class="item-title">{{ item.title }}</span> - 
+        <span class="item-quantity">Quantity: {{ item.quantity }}</span> - 
+        <span class="item-price">Price: {{ item.price  }}</span>
+      </li>
+    </ul>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button color="warn" (click)="onConfirm()">Confirm</button>
+    <button mat-button (click)="onCancel()">Cancel</button>
+</mat-dialog-actions>

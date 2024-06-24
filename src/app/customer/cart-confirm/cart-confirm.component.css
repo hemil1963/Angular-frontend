@@ -1,0 +1,69 @@
+/* Global styles for dialog content and actions */
+:host {
+  display: block;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Dialog title */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Dialog content */
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Cart items list */
+.cart-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-details {
+  flex-grow: 1; /* Expand to fill remaining space */
+  display: flex;
+  align-items: center;
+}
+
+.item-title {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.item-quantity {
+  color: #666;
+  margin-right: 10px;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Dialog actions */
+mat-dialog-actions {
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* Confirm button */
+button[mat-raised-button] {
+  margin-left: 10px;
+}
+
+/* Cancel button */
+button[mat-button] {
+  color: #333;
+}
